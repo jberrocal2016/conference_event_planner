@@ -44,7 +44,10 @@ export const venueSlice = createSlice({
       const { payload: index } = action; // Extract index from action payload
       if (state[index]) {
         // Check if the venue exists at the given index
-        if (state[index].name === " Auditorium Hall (Capacity:200)" && state[index].quantity >= 3) {
+        if (
+          state[index].name === " Auditorium Hall (Capacity:200)" &&
+          state[index].quantity >= 3
+        ) {
           // Prevent adding more than 3 Auditorium Hall bookings
           return;
         }
